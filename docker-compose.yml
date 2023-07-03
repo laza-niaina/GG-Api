@@ -6,11 +6,11 @@ services:
     container_name: chatgpttoapi
     restart: unless-stopped
     ports:
-      - '8080:8080'
+      - '8080:5000'
     environment:
       SERVER_HOST: 0.0.0.0
-      SERVER_PORT: 8080
-      ADMIN_PASSWORD: TotallySecurePassword
+      SERVER_PORT: 5000
+      ADMIN_PASSWORD: MDP
       # Reverse Proxy - Available on accessToken
       API_REVERSE_PROXY: https://bypass.churchless.tech/api/conversation
       # If the parameter API_REVERSE_PROXY is empty, the default request URL is https://chat.openai.com/backend-api/conversation, and the PUID is required.
